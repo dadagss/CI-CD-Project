@@ -1,9 +1,14 @@
 name: CI
 
+on:
+  push:
+    branches:
+      - main
+      
 jobs:
   build:
     name: 'Build and push'
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4.2.2
