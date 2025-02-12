@@ -1,4 +1,5 @@
-.env
+*.env
+..env*
 criarbanco.js
 
 node_modules/
@@ -15,3 +16,9 @@ node_modules/
 .DS_Store
 dist/
 build/
+
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+**/.terraform/*
