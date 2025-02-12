@@ -22,16 +22,28 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20  
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v4
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Generate tag
         id: generate_tag
         run: |
           SHA=$(echo $GITHUB_SHA | head -c7)
-          echo "sha=$SHA" >> $GITHUB_OUTPUT 
+          echo "sha=$SHA" >> $GITHUB_OUTPUT
 
-      - name: Build docker image
-        run: docker build -t ci-project:${{ steps.generate_tag.outputs.sha}} .
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          aws_region: us-east-2
+
+      - name: Login to Amazon AWS ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
