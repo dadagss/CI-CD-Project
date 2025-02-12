@@ -160,7 +160,7 @@ resource "aws_iam_role_policy" "tf-policy" {
         Resource = "*"
       },
       {
-        Sid      = "Statement2"
+        Sid      = "Statement3"
         Effect   = "Allow"
         Action   = "s3:*"
         Resource = "*"

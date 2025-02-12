@@ -7,10 +7,10 @@ terraform {
   }
   backend "s3" {
     bucket = "dags-ci-project"
-    key = "state/terraform.tfstate"
+    key    = "state/terraform.tfstate"
     region = "us-east-2"
   }
-  
+
 }
 
 provider "aws" {
