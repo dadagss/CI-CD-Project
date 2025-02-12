@@ -1,2 +1,17 @@
 .env
 criarbanco.js
+
+node_modules/
+
+*.log
+*.temp
+*.tmp 
+
+*.local
+
+.vscode/
+.idea/
+
+.DS_Store
+dist/
+build/
