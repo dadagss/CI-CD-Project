@@ -47,3 +47,25 @@ jobs:
       - name: Login to Amazon AWS ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build docker image
+        id: build-docker-image
+        env:
+          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          TAG: ${{ steps.generate_tag.outputs.sha }}
+        run: | 
+         docker build -t $REGISTRY/dags-ci-project:$TAG .
+         docker push $REGISTRY/dags-ci-project:$TAG
+         IMAGE=$(echo $REGISTRY/dags-ci-project:$TAG)
+         echo "image=$IMAGE" >> $GITHUB_OUTPUT
+
+      - name: Deploy to App Runner
+        uses: awslabs/amazon-app-runner-deploy@main
+        with:
+          service: dags-ci-project
+          image: ${{ steps.build-docker-image.outputs.image}}
+          access-role-arn: arn:aws:iam::950144537837:role/app-runner-role
+          region: us-east-2
+          cpu: 1
+          memory: 1
+          port: 3001
