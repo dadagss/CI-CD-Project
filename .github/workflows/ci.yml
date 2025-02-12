@@ -63,9 +63,9 @@ jobs:
         uses: awslabs/amazon-app-runner-deploy@main
         with:
           service: dags-ci-project
-          image: ${{ steps.build-docker-image.outputs.image}}
+          image: ${{ steps.build-docker-image.outputs.image }}
           access-role-arn: arn:aws:iam::950144537837:role/app-runner-role
           region: us-east-2
           cpu: 1
-          memory: 1
+          memory: 2
           port: 3001
