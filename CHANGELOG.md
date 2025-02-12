@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dadagss/CI-CD-Project/compare/v1.0.0...v1.0.1) (2025-02-12)
+
+
+### Bug Fixes
+
+* change ram ([25f144f](https://github.com/dadagss/CI-CD-Project/commit/25f144f6efc88148f3342a40ab71f1305c007be3))
+
 # 1.0.0 (2025-02-12)
 
 
