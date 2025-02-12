@@ -57,10 +57,10 @@ jobs:
         run: terraform init
       
       - name: Run terraform plan
-        run: Run terraform plan
+        run: terraform plan
 
       - name: Run terraform apply
-        run: Run terraform apply -auto-approve
+        run: terraform apply -auto-approve
 
       # - name: Build docker image
       #   id: build-docker-image
