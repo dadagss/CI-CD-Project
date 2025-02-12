@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build:
-    name: 'Build and push'
+    name: 'Run Terraform'
     runs-on: ubuntu-latest
 
     steps:
@@ -48,24 +48,41 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Build docker image
-        id: build-docker-image
-        env:
-          REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          TAG: ${{ steps.generate_tag.outputs.sha }}
-        run: | 
-         docker build -t $REGISTRY/dags-ci-project:$TAG .
-         docker push $REGISTRY/dags-ci-project:$TAG
-         IMAGE=$(echo $REGISTRY/dags-ci-project:$TAG)
-         echo "image=$IMAGE" >> $GITHUB_OUTPUT
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v3
+        with: 
+          terraform_version: 1.8.4
 
-      - name: Deploy to App Runner
-        uses: awslabs/amazon-app-runner-deploy@main
-        with:
-          service: dags-ci-project
-          image: ${{ steps.build-docker-image.outputs.image }}
-          access-role-arn: arn:aws:iam::950144537837:role/app-runner-role
-          region: us-east-2
-          cpu: 1
-          memory: 2
-          port: 3001
+      - name: Run terraform init
+        run: terraform init
+
+      - name: Run terraform format
+        run: terraform fmt -check
+      
+      - name: Run terraform plan
+        run: Run terraform plan
+
+      - name: Run terraform apply
+        run: Run terraform apply -auto-approve
+
+      # - name: Build docker image
+      #   id: build-docker-image
+      #   env:
+      #     REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+      #     TAG: ${{ steps.generate_tag.outputs.sha }}
+      #   run: | 
+      #    docker build -t $REGISTRY/dags-ci-project:$TAG .
+      #    docker push $REGISTRY/dags-ci-project:$TAG
+      #    IMAGE=$(echo $REGISTRY/dags-ci-project:$TAG)
+      #    echo "image=$IMAGE" >> $GITHUB_OUTPUT
+
+      # - name: Deploy to App Runner
+      #   uses: awslabs/amazon-app-runner-deploy@main
+      #   with:
+      #     service: dags-ci-project
+      #     image: ${{ steps.build-docker-image.outputs.image }}
+      #     access-role-arn: arn:aws:iam::950144537837:role/app-runner-role
+      #     region: us-east-2
+      #     cpu: 1
+      #     memory: 2
+      #     port: 3001
