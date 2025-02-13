@@ -59,6 +59,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
+      - name: Debug Image Identifier
+        run: |
+            echo "Image Identifier: ${image}"
+  
+
   deploy-dev:
     name: 'Deploy to AWS AppRunner (Dev)'
     runs-on: ubuntu-latest
