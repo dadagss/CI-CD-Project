@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/dadagss/CI-CD-Project/compare/v1.0.2...v1.0.3) (2025-02-13)
+
+
+### Bug Fixes
+
+* image url ([1e87ba4](https://github.com/dadagss/CI-CD-Project/commit/1e87ba43bd4db3343c1ecf670965f43eb15b5165))
+* image url ([475aa3a](https://github.com/dadagss/CI-CD-Project/commit/475aa3a3eea5cf2abb54d9da179995f32f348b2a))
+* image-url ([383044c](https://github.com/dadagss/CI-CD-Project/commit/383044c8e9e1568fc47120d6878365691dd8186b))
+
 ## [1.0.2](https://github.com/dadagss/CI-CD-Project/compare/v1.0.1...v1.0.2) (2025-02-13)
 
 
