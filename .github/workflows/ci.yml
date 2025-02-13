@@ -79,7 +79,8 @@ jobs:
           terraform_version: 1.8.4
 
       - name: Debug Image Identifier
-        run: echo "Image Identifier: ${{ needs.build.outputs.image }}"
+        run: |
+            echo "Image Identifier: ${{ needs.build.outputs.image }}"
 
       - name: Deploy to AWS AppRunner (Dev)
         run: |
