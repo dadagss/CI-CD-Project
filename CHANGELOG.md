@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/dadagss/CI-CD-Project/compare/v1.0.1...v1.0.2) (2025-02-13)
+
+
+### Bug Fixes
+
+* policys ([c7691f2](https://github.com/dadagss/CI-CD-Project/commit/c7691f2e618aa92c04e03d2eb31fca63dfbc7d84))
+* terraform pipeline ([6246a95](https://github.com/dadagss/CI-CD-Project/commit/6246a952e11e2f3c6e1832420e2235f6b8bfc135))
+
 ## [1.0.1](https://github.com/dadagss/CI-CD-Project/compare/v1.0.0...v1.0.1) (2025-02-12)
 
 
