@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/dadagss/CI-CD-Project/compare/v1.0.3...v1.0.4) (2025-02-13)
+
+
+### Bug Fixes
+
+* pipeline image ([0002ad2](https://github.com/dadagss/CI-CD-Project/commit/0002ad2219377d20a7f31eb68049f64100fb50ee))
+* testing new image parameters ([b1919f0](https://github.com/dadagss/CI-CD-Project/commit/b1919f0799b5d5eb868ac0d3517919d8dfb7545f))
+
 ## [1.0.3](https://github.com/dadagss/CI-CD-Project/compare/v1.0.2...v1.0.3) (2025-02-13)
 
 
