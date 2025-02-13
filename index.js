@@ -55,5 +55,5 @@ app.get("/", async (req, res) => {
 // Inicializa o servidor e cria as tabelas
 app.listen(port, async () => {
   console.log(`Server running on port ${port}`);
-  await createTables(); // Cria as tabelas ao iniciar o servidor
+  await createTables(); 
 });

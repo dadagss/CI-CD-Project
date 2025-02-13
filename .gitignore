@@ -22,3 +22,5 @@ build/
 *.tfvars
 
 **/.terraform/*
+
+*.terraform.lock.hcl

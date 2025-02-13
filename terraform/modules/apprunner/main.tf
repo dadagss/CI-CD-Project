@@ -37,3 +37,28 @@ resource "aws_s3_bucket_versioning" "Dagsbucket" {
     status = "Enabled"
   }
 }
+
+# terraform/modules/apprunner/main.tf
+resource "aws_apprunner_service" "app" {
+  service_name = var.service_name
+
+  source_configuration {
+    image_repository {
+      image_identifier = var.image_identifier
+      image_repository_type = "ECR"
+
+      image_configuration {
+        port = var.port
+        runtime_environment_variables = var.environment_variables
+      }
+    }
+
+    authentication_configuration {
+      access_role_arn = var.access_role_arn
+    }
+  }
+
+  tags = {
+    Environment = var.environment
+  }
+}
