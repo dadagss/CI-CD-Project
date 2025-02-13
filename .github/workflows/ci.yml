@@ -51,7 +51,7 @@ jobs:
         run: |
           docker build -t $REGISTRY/dags-ci-project:$TAG .
           docker push $REGISTRY/dags-ci-project:$TAG
-          IMAGE=$(echo $REGISTRY/dags-ci-project:$TAG)
+          IMAGE="$REGISTRY/dags-ci-project:$TAG"
           echo "image=$IMAGE" >> $GITHUB_OUTPUT
 
       - name: Semantic Release
@@ -80,7 +80,7 @@ jobs:
 
       - name: Debug Image Identifier
         run: |
-            echo "Image Identifier: ${{ needs.build.outputs.image }}"
+          echo "Image Identifier: ${{ needs.build.outputs.image }}"
 
       - name: Deploy to AWS AppRunner (Dev)
         run: |
