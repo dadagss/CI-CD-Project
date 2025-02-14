@@ -30,11 +30,10 @@ resource "aws_apprunner_service" "app" {
     }
   }
   instance_configuration {
-    cpu    = var.cpu
-    memory = var.memory
+    cpu    = var.CPU
+    memory = var.RAM
   }
   tags = {
     Environment = var.environment
-    IAC = TRUE
   }
 }
