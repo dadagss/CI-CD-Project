@@ -74,7 +74,7 @@ jobs:
         env:
           TF_VAR_service_name: "my-app-dev"
           TF_VAR_image_identifier: "${{ steps.build-docker-image.outputs.image }}"
-          TF_VAR_access_role_arn: ${{ secrets.AWS_ROLE }}
+          TF_VAR_access_role_arn: ${{ secrets.APPRUNNER_ROLE }}
           TF_VAR_port: 3001
           TF_VAR_environment: "dev"
           TF_VAR_environment_variables: '{"NODE_ENV": "development"}'
