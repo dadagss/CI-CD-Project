@@ -29,7 +29,10 @@ resource "aws_apprunner_service" "app" {
       access_role_arn = var.access_role_arn
     }
   }
-
+  instance_configuration {
+    cpu    = var.cpu
+    memory = var.memory
+  }
   tags = {
     Environment = var.environment
     IAC = TRUE
