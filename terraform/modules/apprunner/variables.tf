@@ -30,3 +30,16 @@ variable "environment" {
   description = "Ambiente (dev, prod, etc.)"
   type        = string
 }
+
+
+variable "CPU" {
+  description = "CPU"
+  type        = number
+  default     = 1
+}
+
+variable "RAM" {
+  description = "RAM"
+  type        = number
+  default     = 2
+}
