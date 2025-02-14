@@ -1,3 +1,11 @@
+## [1.0.8](https://github.com/dadagss/CI-CD-Project/compare/v1.0.7...v1.0.8) (2025-02-14)
+
+
+### Bug Fixes
+
+* apprunner role permissions ([21e7027](https://github.com/dadagss/CI-CD-Project/commit/21e702786535fb57475e91bd379c32751a381165))
+* apprunner role permissions ([165c7cf](https://github.com/dadagss/CI-CD-Project/commit/165c7cf998f85c0b5f5ff0d6eb5226eff6ab264d))
+
 ## [1.0.7](https://github.com/dadagss/CI-CD-Project/compare/v1.0.6...v1.0.7) (2025-02-14)
 
 
