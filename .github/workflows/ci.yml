@@ -71,6 +71,7 @@ jobs:
           terraform init
           terraform plan
           terraform apply -auto-approve
+          echo "SERVICE_URL=$(terraform output -raw service_url)" >> $GITHUB_ENV
         env:
           TF_VAR_service_name: "my-app-dev"
           TF_VAR_image_identifier: "${{ steps.build-docker-image.outputs.image }}"
@@ -83,7 +84,7 @@ jobs:
 
       - name: Verify Application Health (Dev)
         run: |
-            RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" http://dev-app-url/health)
+            RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" $SERVICE_URL/health)
             if [ "$RESPONSE" -ne 200 ]; then
               echo "Application health check failed with status code $RESPONSE"
               exit 1
@@ -91,6 +92,10 @@ jobs:
               echo "Application is healthy"
             fi
 
+      - name: Delete Aplication Dev
+        run: |
+            cd terraform/dev
+            terraform destroy -auto-approve
       - name: Deploy to AWS AppRunner (Prod)
         run: |
             cd terraform/prod
