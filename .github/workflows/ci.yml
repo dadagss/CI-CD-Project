@@ -71,7 +71,6 @@ jobs:
           terraform init
           terraform plan
           terraform apply -auto-approve
-          echo "SERVICE_URL=$(terraform output -raw service_url)" >> $GITHUB_ENV
         env:
           TF_VAR_service_name: "my-app-dev"
           TF_VAR_image_identifier: "${{ steps.build-docker-image.outputs.image }}"
