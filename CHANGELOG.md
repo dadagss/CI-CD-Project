@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/dadagss/CI-CD-Project/compare/v1.0.6...v1.0.7) (2025-02-14)
+
+
+### Bug Fixes
+
+* change ecr and iam locations ([118818c](https://github.com/dadagss/CI-CD-Project/commit/118818c5bd7a1e751c150d31ce61a00e1f55550e))
+
 ## [1.0.6](https://github.com/dadagss/CI-CD-Project/compare/v1.0.5...v1.0.6) (2025-02-14)
 
 
