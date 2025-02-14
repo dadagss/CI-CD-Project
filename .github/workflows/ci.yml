@@ -81,10 +81,6 @@ jobs:
           TF_VAR_CPU: "1 vCPU"
           TF_VAR_RAM: "2 GB"
 
-      - name: Delete Aplication Dev
-        run: |
-            cd terraform/dev
-            terraform destroy -auto-approve
       - name: Deploy to AWS AppRunner (Prod)
         run: |
             cd terraform/prod

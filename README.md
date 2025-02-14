@@ -90,8 +90,7 @@ git commit -m "mensagem"
 Git push
 ```
 
-obs. É importante que você configure as roles e os secrets para que o codigo funcione, no codigo iam.tf ja temos elas configuradas e basta aplica-las manualmente
-obs. Sem contar que há partes do codigo que foram direcionadas para este repositorio, lembre-se de fazer as alterações necessárias
+obs. É importante que você configure as roles e os secrets para que o codigo funcione, no codigo iam.tf ja temos elas configuradas e basta aplica-las manualmente Sem contar que há partes do codigo que foram direcionadas para este repositorio, lembre-se de fazer as alterações necessárias
 
 ## Recursos Criados
 
