@@ -57,3 +57,7 @@ app.listen(port, async () => {
   console.log(`Server running on port ${port}`);
   await createTables(); 
 });
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK' });
+});

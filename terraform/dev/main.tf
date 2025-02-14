@@ -7,4 +7,6 @@ module "apprunner" {
   port                  = var.port
   environment_variables = var.environment_variables
   environment           = var.environment
+  CPU                   = var.CPU
+  RAM                   = var.RAM
 }

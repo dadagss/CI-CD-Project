@@ -32,5 +32,6 @@ resource "aws_apprunner_service" "app" {
 
   tags = {
     Environment = var.environment
+    IAC = TRUE
   }
 }
