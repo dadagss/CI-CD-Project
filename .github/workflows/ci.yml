@@ -15,6 +15,8 @@ jobs:
   build:
     name: 'Build and Push Docker Image'
     runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.build-docker-image.outputs.image }}
 
     steps:
       - uses: actions/checkout@v4
@@ -61,7 +63,7 @@ jobs:
 
       - name: Debug Image Identifier
         run: |
-            echo "Image Identifier: ${image}"
+            echo ${{ steps.build-docker-image.outputs.image }}
   
 
   deploy-dev:
