@@ -1,3 +1,11 @@
+## [1.0.6](https://github.com/dadagss/CI-CD-Project/compare/v1.0.5...v1.0.6) (2025-02-14)
+
+
+### Bug Fixes
+
+* output of docker image ([1b3b1d3](https://github.com/dadagss/CI-CD-Project/commit/1b3b1d39e4f1c95281b36786ee94c4e5b4f82ead))
+* output of docker image ([7fca940](https://github.com/dadagss/CI-CD-Project/commit/7fca940d265c332fc55dcdde3b933a31fd326e1b))
+
 ## [1.0.5](https://github.com/dadagss/CI-CD-Project/compare/v1.0.4...v1.0.5) (2025-02-13)
 
 
