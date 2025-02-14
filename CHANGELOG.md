@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/dadagss/CI-CD-Project/compare/v1.0.9...v1.0.10) (2025-02-14)
+
+
+### Bug Fixes
+
+* healthy check http_code ([2546f3b](https://github.com/dadagss/CI-CD-Project/commit/2546f3bec22c3572f1a8124d67393dc52630df81))
+
 ## [1.0.9](https://github.com/dadagss/CI-CD-Project/compare/v1.0.8...v1.0.9) (2025-02-14)
 
 
