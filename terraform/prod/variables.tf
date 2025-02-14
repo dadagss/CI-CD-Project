@@ -32,13 +32,13 @@ variable "environment" {
 }
 
 variable "CPU" {
-  description = "CPU"
-  type        = number
-  default     = 1
+  description = "CPU configuration"
+  type        = string
+  default     = "1 vCPU"
 }
 
 variable "RAM" {
   description = "RAM"
-  type        = number
-  default     = 2
+  type        = string
+  default     = "2 GB"
 }

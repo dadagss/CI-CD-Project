@@ -104,5 +104,5 @@ jobs:
           TF_VAR_port: 3001
           TF_VAR_environment: "prod"
           TF_VAR_environment_variables: '{"NODE_ENV": "production"}'
-          TF_VAR_CPU: 2
-          TF_VAR_RAM: 4
+          TF_VAR_CPU: "2 vCPU"
+          TF_VAR_RAM: "4 GB"
