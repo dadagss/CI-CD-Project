@@ -65,6 +65,12 @@ jobs:
         with:
           terraform_version: 1.8.4
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+            role-to-assume: ${{ secrets.APPRUNNER_ROLE}}
+            aws-region: ${{ secrets.AWS_REGION }}
+
       - name: Deploy to AWS AppRunner (Dev)
         run: |
           cd terraform/dev
