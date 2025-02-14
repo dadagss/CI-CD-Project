@@ -16,11 +16,11 @@ resource "aws_apprunner_service" "app" {
 
   source_configuration {
     image_repository {
-      image_identifier = var.image_identifier
+      image_identifier      = var.image_identifier
       image_repository_type = "ECR"
 
       image_configuration {
-        port = var.port
+        port                          = var.port
         runtime_environment_variables = var.environment_variables
       }
     }

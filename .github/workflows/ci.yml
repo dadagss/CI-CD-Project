@@ -78,8 +78,8 @@ jobs:
           TF_VAR_port: 3001
           TF_VAR_environment: "dev"
           TF_VAR_environment_variables: '{"NODE_ENV": "development"}'
-          TF_VAR_CPU: 1
-          TF_VAR_RAM: 2
+          TF_VAR_CPU: "1 vCPU"
+          TF_VAR_RAM: "2 GB"
 
       - name: Verify Application Health (Dev)
         run: |
