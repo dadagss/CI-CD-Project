@@ -1,3 +1,10 @@
+## [1.0.11](https://github.com/dadagss/CI-CD-Project/compare/v1.0.10...v1.0.11) (2025-02-14)
+
+
+### Bug Fixes
+
+* delete terraform destroy ([1e07e4d](https://github.com/dadagss/CI-CD-Project/commit/1e07e4d7f69039668158ad07ea5f0b9ec6578879))
+
 ## [1.0.10](https://github.com/dadagss/CI-CD-Project/compare/v1.0.9...v1.0.10) (2025-02-14)
 
 
