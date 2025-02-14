@@ -1,3 +1,10 @@
+## [1.0.9](https://github.com/dadagss/CI-CD-Project/compare/v1.0.8...v1.0.9) (2025-02-14)
+
+
+### Bug Fixes
+
+* cpu and ram especifications ([71f4e31](https://github.com/dadagss/CI-CD-Project/commit/71f4e318679fbf4639da5cc44925e5b21ad0aac2))
+
 ## [1.0.8](https://github.com/dadagss/CI-CD-Project/compare/v1.0.7...v1.0.8) (2025-02-14)
 
 
